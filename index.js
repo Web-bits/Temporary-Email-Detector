@@ -10,10 +10,10 @@ form.addEventListener("submit", (e)=>{
     console.log(url);
     result=fetch(url)
     .then(response => response.json())
-    .then(data => hello(data) )
+    .then(data => check(data) )
     .catch(error => console.error('Error:', error));
 });
-function hello(data){
+function check(data){
     form.classList.add("error");
     if(data.disposable){
         form.classList.replace("valid" , "error");
